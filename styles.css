@@ -1,0 +1,125 @@
+:root {
+    --Orange-500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-950: hsl(216, 12%, 8%);
+    --Grey-background: hsla(213, 19.60%, 18.00%, 0.50);
+
+    --regular-font: 400;
+    --bold-font: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: "Overpass", sans-serif;
+    background-color: var(--Grey-950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p {
+    color: var(--Grey-500);
+    font-size: 0.8rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.card {
+    background-color: var(--Grey-background);
+    width: 22rem;
+    display: grid;
+    gap: 20px;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--Grey-900);
+    display: grid;
+    place-content: center;
+}
+
+.heading {
+    color: var(--White);
+    font-size: 1.5rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--Grey-900);
+    color: var(--Grey-500);
+    font-weight: var(--bold-font);
+}
+
+.rating-btn:hover {
+    background-color: var(--Orange-500);
+    color: var(--Grey-900);
+}
+
+.submit {
+    height: 40px;
+    border-radius: 20px;
+    font-weight: var(--bold-font);
+    background-color: var(--Orange-500);
+}
+
+.submit:hover {
+    background-color: var(--White);
+}
+
+.rating-text {
+    background-color: var(--Grey-background);
+    width: fit-content;
+    margin: auto;
+    padding: 5px 18px;
+    border-radius: 12px;
+    color: var(--Orange-500);
+}
+
+/* generic class */
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: var(--White);
+    color: var(--Grey-950);
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

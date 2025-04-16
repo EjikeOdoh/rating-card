@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <title>Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
-  <!-- Rating state start -->
+ <div class="card">
+    <!-- First component -->
+    <div class="icon">
+      <img src="./images/icon-star.svg">
+    </div>
 
-  How did we do?
+    <!-- Second component -->
+    <h1 class="heading">How did we do?</h1>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <!-- Third component -->
+    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+      offering!</p>
 
-  1 2 3 4 5
+    <div class="btn-container">
+      <button onclick="select(event)" class="rating-btn">1</button>
+      <button onclick="select(event)" class="rating-btn">2</button>
+      <button onclick="select(event)" class="rating-btn">3</button>
+      <button onclick="select(event)" class="rating-btn">4</button>
+      <button onclick="select(event)" class="rating-btn">5</button>
+    </div>
 
-  Submit
+    <button onclick="submit()" class="submit">
+      SUBMIT
+    </button>
+  </div>
 
-  <!-- Rating state end -->
+  <div class="card center hidden">
+    <!-- First component -->
+    <div>
+      <img src="./images/illustration-thank-you.svg">
+    </div>
+    <!-- Second component -->
+    <p class="rating-text">
+      You selected <span id="rating">0</span> out of 5
+    </p>
 
-  <!-- Thank you state start -->
+    <!-- Third component -->
+    <h1 class="heading">Thank you!</h1>
 
-  You selected <!-- Add rating here --> out of 5
+    <!-- Fourth component -->
+    <p>We appreciate you taking the time to give a rating. If you ever need more support,don’t hesitate to get in touch!
+    </p>
+  </div>
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
+  <script src="./script.js"></script>
 </body>
+
 </html>
